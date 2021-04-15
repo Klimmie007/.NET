@@ -14,7 +14,6 @@ namespace ContosoCrafts.WebSite.Pages.Db
     {
         private readonly ILogger<IndexModel> _logger;
         private readonly ContosoCrafts.WebSite.Data.ProductContext _context;
-
         public IndexModel(ILogger<IndexModel> logger,
             ContosoCrafts.WebSite.Data.ProductContext context)
         {
@@ -22,7 +21,6 @@ namespace ContosoCrafts.WebSite.Pages.Db
             _context = context;
         }
         public IList<Product> Products { get; set; }
-
         public void OnGet()
         {
             Products = _context.Products.ToList();
